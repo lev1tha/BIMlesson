@@ -1,0 +1,20 @@
+{
+  "title": "Web-разработка",
+  "icon": "LayoutTemplate",
+  "pages": [
+    "index",
+    "01-html-css-basics",
+    "02-flexbox",
+    "03-css-grid",
+    "04-responsive-design",
+    "05-forms",
+    "06-accessibility",
+    "07-typography-and-design",
+    "08-images-and-performance",
+    "09-git-and-collaboration",
+    "10-seo-basics",
+    "11-domains-and-hosting",
+    "12-figma-and-prototyping",
+    "13-web-analytics"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Управление бизнес-дизайном",
+  "icon": "Briefcase",
+  "pages": [
+    "index",
+    "01-what-is-business-design",
+    "02-business-model-canvas",
+    "03-value-proposition-jtbd",
+    "04-customer-journey-map",
+    "05-unit-economics",
+    "06-business-processes"
+  ]
+}

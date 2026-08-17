@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+/*
+ * Дизайн-токены портала. Все цвета — здесь, в CSS-переменных (см. CLAUDE.md → «Дизайн-система»).
+ * В JSX используем классы Tailwind по этим токенам (bg-edu-ok/10, text-subject-cs), а не hex.
+ */
+@theme {
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Обучающая обратная связь */
+  --color-edu-ok: #16a34a;
+  --color-edu-bad: #dc2626;
+  --color-edu-warn: #d97706;
+
+  /* Пастельные цветовые маркеры дисциплин (навигация, бейджи) */
+  --color-subject-cs: #2563eb; /* Вычислительные системы */
+  --color-subject-sp: #7c3aed; /* Системное программирование */
+  --color-subject-web: #059669; /* Web-разработка */
+  --color-subject-lit: #d97706; /* Компьютерная грамотность */
+  --color-subject-bd: #db2777; /* Бизнес-дизайн */
+
+  /* Стадии конвейера CPU (виджет cpu-pipeline) */
+  --color-stage-if: #2563eb; /* Выборка */
+  --color-stage-id: #7c3aed; /* Декодирование */
+  --color-stage-ex: #d97706; /* Исполнение */
+  --color-stage-wb: #059669; /* Запись */
+}
+
+/* Nunito — основной шрифт всего портала */
+body {
+  font-family: var(--font-sans);
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html > body[data-scroll-locked] {
+  margin-right: 0px !important;
+  --removed-body-scroll-bar-size: 0px !important;
+}

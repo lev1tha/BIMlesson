@@ -1,0 +1,19 @@
+{
+  "title": "Системное программирование",
+  "icon": "Code",
+  "pages": [
+    "index",
+    "01-first-program",
+    "02-arrays-algorithms",
+    "03-objects-and-json",
+    "04-conditions-and-logic",
+    "05-async-and-api",
+    "06-sorting-and-searching",
+    "07-regular-expressions",
+    "08-debugging-and-errors",
+    "09-testing",
+    "10-data-structures",
+    "11-modules-and-npm",
+    "12-numbers-money-dates"
+  ]
+}

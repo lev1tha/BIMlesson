@@ -1,0 +1,22 @@
+{
+  "title": "Вычислительные системы",
+  "icon": "Cpu",
+  "pages": [
+    "index",
+    "01-architecture-and-cpu",
+    "02-osi-model",
+    "03-ip-addressing-vlsm",
+    "04-number-systems",
+    "05-dns-and-http",
+    "06-network-security",
+    "07-routing",
+    "08-caching-and-cdn",
+    "09-cloud-and-virtualization",
+    "10-operating-systems",
+    "11-hardware-and-peripherals",
+    "12-encryption-basics",
+    "13-boolean-logic",
+    "14-monitoring-and-sla",
+    "15-storage-and-backup"
+  ]
+}
