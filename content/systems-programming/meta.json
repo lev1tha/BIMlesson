@@ -14,6 +14,10 @@
     "09-testing",
     "10-data-structures",
     "11-modules-and-npm",
-    "12-numbers-money-dates"
+    "12-numbers-money-dates",
+    "13-dom-and-events",
+    "14-csv-and-data",
+    "15-node-http-server",
+    "16-typescript-intro"
   ]
 }

@@ -15,6 +15,10 @@
     "10-seo-basics",
     "11-domains-and-hosting",
     "12-figma-and-prototyping",
-    "13-web-analytics"
+    "13-web-analytics",
+    "14-css-animations",
+    "15-frontend-security",
+    "16-deploy-pipeline",
+    "17-tailwind"
   ]
 }

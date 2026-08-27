@@ -17,6 +17,10 @@
     "12-encryption-basics",
     "13-boolean-logic",
     "14-monitoring-and-sla",
-    "15-storage-and-backup"
+    "15-storage-and-backup",
+    "16-nat-and-dhcp",
+    "17-wifi-and-mobile",
+    "18-vpn-and-remote-work",
+    "19-ipv6"
   ]
 }
