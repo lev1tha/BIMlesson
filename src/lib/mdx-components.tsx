@@ -13,6 +13,7 @@ import { LogicGates } from '@/components/widgets/logic-gates';
 import { UptimeCalculator } from '@/components/widgets/uptime-calculator';
 import { RaidLab } from '@/components/widgets/raid-lab';
 import { UnitEconomics } from '@/components/widgets/unit-economics';
+import { PhishingHunt } from '@/components/widgets/phishing-hunt';
 import { Sandbox } from '@/components/widgets/sandbox';
 import { FlexboxPlayground } from '@/components/widgets/flexbox-playground';
 import { HotkeyTrainer } from '@/components/widgets/hotkey-trainer';
@@ -42,6 +43,7 @@ export const widgetComponents = {
   UptimeCalculator,
   RaidLab,
   UnitEconomics,
+  PhishingHunt,
   Sandbox,
   FlexboxPlayground,
   HotkeyTrainer,

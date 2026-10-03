@@ -21,6 +21,9 @@
     "16-nat-and-dhcp",
     "17-wifi-and-mobile",
     "18-vpn-and-remote-work",
-    "19-ipv6"
+    "19-ipv6",
+    "20-databases-inside",
+    "21-docker-and-containers",
+    "22-email-under-the-hood"
   ]
 }

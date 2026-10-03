@@ -6,6 +6,7 @@ import {
   Cpu,
   GraduationCap,
   LayoutTemplate,
+  ShieldCheck,
 } from 'lucide-react';
 
 const SUBJECTS = [
@@ -43,6 +44,13 @@ const SUBJECTS = [
     desc: 'Бизнес-модели, ценность и JTBD, путь клиента, юнит-экономика, процессы',
     icon: Briefcase,
     accent: 'bg-subject-bd/10 text-subject-bd',
+  },
+  {
+    href: '/docs/digital-security',
+    title: 'Цифровая безопасность',
+    desc: 'Риски и угрозы, доступы, социальная инженерия, инциденты — для 3 курса',
+    icon: ShieldCheck,
+    accent: 'bg-subject-sec/10 text-subject-sec',
   },
 ];
 

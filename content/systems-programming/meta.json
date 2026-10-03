@@ -18,6 +18,9 @@
     "13-dom-and-events",
     "14-csv-and-data",
     "15-node-http-server",
-    "16-typescript-intro"
+    "16-typescript-intro",
+    "17-sql-for-analysts",
+    "18-node-scripts",
+    "19-database-from-code"
   ]
 }
