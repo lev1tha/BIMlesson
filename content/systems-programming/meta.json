@@ -21,6 +21,9 @@
     "16-typescript-intro",
     "17-sql-for-analysts",
     "18-node-scripts",
-    "19-database-from-code"
+    "19-database-from-code",
+    "20-clean-code",
+    "21-external-apis",
+    "22-telegram-bot"
   ]
 }

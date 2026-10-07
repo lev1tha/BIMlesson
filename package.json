@@ -10,7 +10,9 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:cov": "vitest run --coverage"
+    "test:cov": "vitest run --coverage",
+    "quiz:check": "node scripts/check-quiz.mjs",
+    "codetask:check": "node scripts/check-codetask.mjs"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.20.0",

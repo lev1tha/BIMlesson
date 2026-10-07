@@ -4,6 +4,14 @@ import * as React from 'react';
 import { Check, X } from 'lucide-react';
 import { cn } from '@/lib/cn';
 import { Panel } from '@/components/ui/card';
+import { hashString, orderQuestions, seededRng } from './logic';
+
+// Случайное зерно на загрузку страницы. Через useSyncExternalStore: на сервере
+// и при гидратации — null (стабильный порядок), на клиенте — случайное.
+let clientSeed: number | null = null;
+const getClientSeed = () => (clientSeed ??= Math.floor(Math.random() * 2 ** 32));
+const getServerSeed = () => null;
+const subscribe = () => () => {};
 
 export interface QuizQuestion {
   question: string;
@@ -29,6 +37,21 @@ const DEFAULT_QUESTIONS: QuizQuestion[] = [
 export function Quiz({ questions = DEFAULT_QUESTIONS }: QuizProps) {
   const id = React.useId();
   const [selected, setSelected] = React.useState<Record<number, number>>({});
+  const pageSeed = React.useSyncExternalStore(subscribe, getClientSeed, getServerSeed);
+  // «Пройти заново» сдвигает зерно — варианты перемешиваются ещё раз.
+  const [round, setRound] = React.useState(0);
+  const orders = React.useMemo(() => {
+    if (pageSeed === null) return orderQuestions(questions);
+    // Порядок выводится из зерна детерминированно: перерисовка родителя его не меняет,
+    // а хеш первого вопроса развязывает несколько квизов на одной странице.
+    const seed = (pageSeed ^ hashString(questions[0]?.question ?? '')) + round * 0x9e3779b9;
+    return orderQuestions(questions, seededRng(seed));
+  }, [questions, pageSeed, round]);
+
+  const restart = () => {
+    setSelected({});
+    setRound((r) => r + 1);
+  };
 
   const answeredCount = Object.keys(selected).length;
   const correctCount = questions.reduce((n, q, i) => (selected[i] === q.answer ? n + 1 : n), 0);
@@ -50,7 +73,8 @@ export function Quiz({ questions = DEFAULT_QUESTIONS }: QuizProps) {
               <fieldset>
                 <legend className="mb-2 text-sm font-semibold">{q.question}</legend>
                 <div className="space-y-1.5">
-                  {q.options.map((opt, oi) => {
+                  {orders[qi].map((oi) => {
+                    const opt = q.options[oi];
                     const isChosen = chosen === oi;
                     const isCorrect = oi === q.answer;
                     const state = !answered ? 'idle' : isCorrect ? 'ok' : isChosen ? 'bad' : 'idle';
@@ -86,6 +110,15 @@ export function Quiz({ questions = DEFAULT_QUESTIONS }: QuizProps) {
           );
         })}
       </ol>
+      {answeredCount > 0 && (
+        <button
+          type="button"
+          onClick={restart}
+          className="mt-4 rounded-md border border-fd-border px-3 py-1.5 text-xs font-semibold hover:bg-fd-accent focus-visible:outline-2 focus-visible:outline-fd-ring"
+        >
+          Пройти заново (варианты перемешаются)
+        </button>
+      )}
     </Panel>
   );
 }

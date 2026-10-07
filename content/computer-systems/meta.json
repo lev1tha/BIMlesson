@@ -24,6 +24,9 @@
     "19-ipv6",
     "20-databases-inside",
     "21-docker-and-containers",
-    "22-email-under-the-hood"
+    "22-email-under-the-hood",
+    "23-blockchain",
+    "24-internet-infrastructure",
+    "25-ai-infrastructure"
   ]
 }

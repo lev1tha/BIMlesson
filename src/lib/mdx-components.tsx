@@ -14,6 +14,10 @@ import { UptimeCalculator } from '@/components/widgets/uptime-calculator';
 import { RaidLab } from '@/components/widgets/raid-lab';
 import { UnitEconomics } from '@/components/widgets/unit-economics';
 import { PhishingHunt } from '@/components/widgets/phishing-hunt';
+import { PivotBuilder } from '@/components/widgets/pivot-builder';
+import { LoanCalculator } from '@/components/widgets/loan-calculator';
+import { SalesFunnel } from '@/components/widgets/sales-funnel';
+import { AbcAnalysis } from '@/components/widgets/abc-analysis';
 import { Sandbox } from '@/components/widgets/sandbox';
 import { FlexboxPlayground } from '@/components/widgets/flexbox-playground';
 import { HotkeyTrainer } from '@/components/widgets/hotkey-trainer';
@@ -44,6 +48,10 @@ export const widgetComponents = {
   RaidLab,
   UnitEconomics,
   PhishingHunt,
+  PivotBuilder,
+  LoanCalculator,
+  SalesFunnel,
+  AbcAnalysis,
   Sandbox,
   FlexboxPlayground,
   HotkeyTrainer,

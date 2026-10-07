@@ -9,6 +9,9 @@
     "04-malware-and-ransomware",
     "05-data-protection-law",
     "06-incident-response",
-    "07-mobile-security"
+    "07-mobile-security",
+    "08-electronic-signature",
+    "09-cloud-security",
+    "10-vulnerabilities-and-patching"
   ]
 }
